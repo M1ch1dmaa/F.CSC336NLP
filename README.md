@@ -336,6 +336,7 @@ Frameworks:
 | RoBERTa        | 0.8634   | 0.8661        | 0.86      | 0.87   | 0.86     | 501.25            |
 | ALBERT         | 0.8387   | 0.8400        | 0.84      | 0.84   | 0.84     | 595.98            |
 | BERT (cased)   | 0.7796   | 0.7836        | 0.79      | 0.78   | 0.78     | 707.09            |
+
 **Хамгийн сайн үр дүн:  RoBERTa + Logistic Regression**
 Test Accuracy: 86.61%
 Cross-validation Score: 86.34%
