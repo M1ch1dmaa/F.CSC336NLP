@@ -15,99 +15,99 @@ Date: 2025-12-19
 6. Үр дүнг үнэлэх (Accuracy, Precision, Recall, F1-score)
 
 # 3. Dataset-ийн танилцуулга (Dataset Description)
--Dataset нэр: Stanford Large Movie Review Dataset (IMDB movie reviews)
--Dataset зорилго: Binary (хоёр ангилал) sentiment буюу сэтгэл хөдлөлийн ангилал хийх (текстээс тухайн сэтгэгдэл эерэг эсвэл сөрөг эсэхийг тодорхойлох)
--Өгөгдлийн төрөл: Text classification
--Ангиллын тоо: 2 (Positive, Negative)
--Нийт өгөгдлийн хэмжээ: 50,000 мөр (25,000 сургалтын датa болон 25,000 тест датa). Нэмэлт unlabeled (шошгогүй) 50,000 баримт (unsupervised learning-д ашиглах боломжтой).
+- Dataset нэр: Stanford Large Movie Review Dataset (IMDB movie reviews)
+- Dataset зорилго: Binary (хоёр ангилал) sentiment буюу сэтгэл хөдлөлийн ангилал хийх (текстээс тухайн сэтгэгдэл эерэг эсвэл сөрөг эсэхийг тодорхойлох)
+- Өгөгдлийн төрөл: Text classification
+- Ангиллын тоо: 2 (Positive, Negative)
+- Нийт өгөгдлийн хэмжээ: 50,000 мөр (25,000 сургалтын датa болон 25,000 тест датa). Нэмэлт unlabeled (шошгогүй) 50,000 баримт (unsupervised learning-д ашиглах боломжтой).
 ## 3.1 Data эх сурвалж
--Dataset link: [https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz]
--Dataset paper: [https://ai.stanford.edu/~amaas/papers/wvSent_acl2011.bib](https://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf]
+- Dataset link: [https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz]
+- Dataset paper: [https://ai.stanford.edu/~amaas/papers/wvSent_acl2011.bib](https://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf]
 
 ## 3.2 Dataset-тэй холбоотой судалгааны өгүүлэл
 **Ensemble of Generative and Discriminative Techniques for Sentiment Analysis of Movie Reviews – Grégoire Mesnil, Tomas Mikolov, Marc’Aurelio Ranzato, Yoshua Bengio, 2014. [https://arxiv.org/abs/1412.5335?utm_source=chatgpt.com]**
 Энэхүү судалгаанд кино шүүмжийн сантимент ангилалд generative болон discriminative аргуудыг хослуулан ашиглах нь гүйцэтгэлийг сайжруулж чадах эсэхийг судалсан.
 Ашигласан аргууд: 
-  -Word2Vec (neural word embeddings)
-  -Logistic Regression
-  -Neural Network classifier
-  -Ensemble learning
+  - Word2Vec (neural word embeddings)
+  - Logistic Regression
+  - Neural Network classifier
+  - Ensemble learning
 Үр дүн:
-  -Ensemble загвар нь дан classifier-аас илүү accuracy үзүүлсэн
-  -Word embedding ашигласан загварууд traditional bag-of-words-оос илүү сайн байсан
+  - Ensemble загвар нь дан classifier-аас илүү accuracy үзүүлсэн
+  - Word embedding ашигласан загварууд traditional bag-of-words-оос илүү сайн байсан
 Дүгнэлт:
   Generative болон discriminative аргуудыг хослуулах нь текстийн семантик мэдээллийг илүү сайн барьж, сантимент ангиллын чанарыг сайжруулдаг.
 **Fine-tuning BERT with Bidirectional LSTM for Fine-grained Movie Reviews Sentiment Analysis – Gibson Nkhata et al., 2025. [https://arxiv.org/abs/2502.20682?utm_source=chatgpt.com]**
 BERT-ийн contextual embedding-ийг LSTM-тай хослуулж fine-grained sentiment classification хийх зорилготой.
 Ашигласан аргууд: 
-  -BERT embedding
-  -Bidirectional LSTM
-  -Fine-tuning
+  - BERT embedding
+  - Bidirectional LSTM
+  - Fine-tuning
 Үр дүн:
-  -BERT + BiLSTM загвар нь зөвхөн BERT-ээс илүү F1-score үзүүлсэн
-  -Context-aware embedding илүү нарийн sentiment ялгадаг
+  - BERT + BiLSTM загвар нь зөвхөн BERT-ээс илүү F1-score үзүүлсэн
+  - Context-aware embedding илүү нарийн sentiment ялгадаг
 Дүгнэлт:
   Transformer болон RNN-г хослуулах нь урт өгүүлбэр дэх sentiment илрүүлэхэд илүү үр дүнтэй.
 **Enhancing Sentiment Classification with Machine Learning and Combinatorial Fusion – Sean Patten et al., 2025. [https://arxiv.org/abs/2510.27014?utm_source=chatgpt.com]**
 Олон машин сургалтын аргуудын үр дүнг combinatorial fusion ашиглан нэгтгэх замаар сантимент ангиллыг сайжруулахыг зорьсон.
 Ашигласан аргууд: 
-  -Logistic Regression
-  -Random Forest
-  -SVM
-  -Ensemble / Fusion techniques
+  - Logistic Regression
+  - Random Forest
+  - SVM
+  - Ensemble / Fusion techniques
 Үр дүн:
-  -Fusion ашигласан загварууд accuracy-гаар дан загваруудаас давсан
-  -Model diversity үр дүнд эерэг нөлөө үзүүлсэн
+  - Fusion ашигласан загварууд accuracy-гаар дан загваруудаас давсан
+  - Model diversity үр дүнд эерэг нөлөө үзүүлсэн
 Дүгнэлт:
   Classifier-уудын ялгаатай алдааг нөхөх замаар ensemble арга илүү тогтвортой үр дүн өгдөг.
 **Semantic Sentiment Analysis Based on Probabilistic Graphical Models and RNN – Ukachi Osisiogu, 2020. [https://arxiv.org/abs/2009.00234?utm_source=chatgpt.com]**
 Семантик хамаарлыг илүү сайн ойлгохын тулд probabilistic graphical model болон RNN-г хослуулсан.
 Ашигласан аргууд: 
-  -Recurrent Neural Network
-  -Probabilistic Graphical Models
+  - Recurrent Neural Network
+  - Probabilistic Graphical Models
 Үр дүн:
-  -Semantic-level sentiment илүү сайн ялгасан
-  -Traditional ML-ээс илүү F1-score үзүүлсэн
+  - Semantic-level sentiment илүү сайн ялгасан
+  - Traditional ML-ээс илүү F1-score үзүүлсэн
 Дүгнэлт:
   Семантик хамаарлыг explicit загварчлах нь сантимент анализын чанарыг сайжруулдаг.
 **A Comprehensive Benchmarking Pipeline for Transformer-Based Sentiment Analysis using Cross-Validated Metrics – Dodo Zaenal Abidin et al., 2025. [https://www.researchgate.net/publication/381285499_Sentiment_Analysis_of_IMDb_Movie_Reviews?utm_source=chatgpt.com]**
 Transformer-based загваруудын гүйцэтгэлийг стандарт pipeline ашиглан харьцуулсан.
 Ашигласан аргууд: 
-  -BERT
-  -RoBERTa
-  -DistilBERT
+  - BERT
+  - RoBERTa
+  - DistilBERT
 Үр дүн:
-  -RoBERTa BERT-ээс илүү дүн үзүүлсэн
-  -Cross-validation нь үнэлгээг илүү найдвартай болгосон
+  - RoBERTa BERT-ээс илүү дүн үзүүлсэн
+  - Cross-validation нь үнэлгээг илүү найдвартай болгосон
 Дүгнэлт:
   Transformer загваруудын гүйцэтгэл нь pretraining strategy-оос ихээхэн хамаардаг.
 **Sentiment Analysis of IMDB Movie Reviews Using BERT (IARIA conference-ийн paper, 2023). [https://personales.upv.es/thinkmind/dl/conferences/eknow/eknow_2023/eknow_2023_2_30_60011.pdf?utm_source=chatgpt.com]**
 IMDb датаг ашиглан BERT-ийн сантимент ангиллын чадварыг үнэлсэн
 Ашигласан аргууд: 
-  -Softmax classifier
-  -BERT
+  - Softmax classifier
+  - BERT
 Үр дүн:
-  -*Accuracy ~90%+
-  -Traditional ML-ээс илүү үр дүнтэй
+  - *Accuracy ~90%+
+  - Traditional ML-ээс илүү үр дүнтэй
 Дүгнэлт:
   Contextual embedding нь sentiment classification-д маш чухал.
 **Sentiment Analysis of IMDb Movie Reviews (thesis / Kaggle based) – Domadula 2023. [https://www.diva-portal.org/smash/get/diva2%3A1779708/FULLTEXT02.pdf?utm_source=chatgpt.com]**
 Kaggle болон IMDb dataset дээр олон аргыг харьцуулсан судалгаа.
 Ашигласан аргууд: 
-  -Logistic Regression
-  -LSTM
-  -Word2Vec
+  - Logistic Regression
+  - LSTM
+  - Word2Vec
 Үр дүн:
-  -LSTM + Word2Vec хамгийн сайн үр дүн үзүүлсэн
+  - LSTM + Word2Vec хамгийн сайн үр дүн үзүүлсэн
 Дүгнэлт:
   Sequence model нь текстийн дарааллыг илүү сайн ойлгодог.
 **Sentiment Analysis of IMDb Movie Reviews Using LSTM (conference/study) – Saad Tayef (document). [https://www.scribd.com/document/744893212/Sentiment-Analysis-of-IMDb-Movie-Reviews-Using-LSTM?utm_source=chatgpt.com]**
 LSTM ашиглан урт текстийн sentiment тодорхойлох боломжийг судалсан.
 Ашигласан аргууд: 
-  -Word2Vec
-  -LSTM
+  - Word2Vec
+  - LSTM
 Үр дүн:
-  -Accuracy ~88–90%
+  - Accuracy ~88–90%
 Дүгнэлт:
   LSTM нь урт өгүүлбэр дэх контекстийг хадгалах чадвартай.
 
@@ -120,19 +120,19 @@ LSTM ашиглан урт текстийн sentiment тодорхойлох б�
 Судалгаанд дараах 7 төрлийн word embedding-үүдийг туршсан:
 
 ### 4.1.1 Transformer-д суурилсан contextual embeddings
--BERT (Bidirectional Encoder Representations from Transformers)
+BERT (Bidirectional Encoder Representations from Transformers)
 
--BERT-Base (uncased): Том жижиг үсгийг ялгахгүй, 768 dimension
+BERT-Base (uncased): Том жижиг үсгийг ялгахгүй, 768 dimension
 
--BERT-Base (cased): Том жижиг үсгийг ялгадаг, 768 dimension
+BERT-Base (cased): Том жижиг үсгийг ялгадаг, 768 dimension
 
--RoBERTa (Robustly Optimized BERT): BERT-ийн сайжруулсан хувилбар, 768 dimension
+RoBERTa (Robustly Optimized BERT): BERT-ийн сайжруулсан хувилбар, 768 dimension
 
--ALBERT (A Lite BERT): Parameter багатай, үр ашигтай BERT хувилбар, 768 dimension
+ALBERT (A Lite BERT): Parameter багатай, үр ашигтай BERT хувилбар, 768 dimension
 
--SBERT (Sentence-BERT): Өгүүлбэрийн түвшний embedding, 384 dimension
+SBERT (Sentence-BERT): Өгүүлбэрийн түвшний embedding, 384 dimension
 
--HateBERT: Hate speech болон сөрөг контекст дээр тусгайлан сургасан BERT, 768 dimension
+HateBERT: Hate speech болон сөрөг контекст дээр тусгайлан сургасан BERT, 768 dimension
 
 ### 4.1.2 Уламжлалт word embedding
 Word2Vec: CBOW болон Skip-gram архитектур ашиглан сургасан, 100 dimension
@@ -222,3 +222,42 @@ Hyperparameter оновчлол: GridSearchCV ашиглан загвар бүр
 | HateBERT         | 768       | Contextual  | Hate speech, сөрөг текст дээр тусгайлан сургасан |
 | Word2Vec         | 100       | Static      | IMDB dataset дээр сургасан, bag-of-words |
 
+# 5.1 Сургалтын орчин болон төхөөрөмж
+Google Colab орчин:
+
+CPU: Intel Xeon (vCPU, Colab-ээс олгогддог)
+
+RAM: ~12.7 GB стандарт / ~25.5 GB high-RAM боломжтой (runtime тохиргоогоор сонгож болно)
+
+GPU: NVIDIA Tesla T4 
+
+CUDA Version: 12.1 (тухайн runtime-ээс хамаарна)
+
+CUDA Cores: ~2,560 (T4-ийн хувьд)
+
+Memory: 16 GB GDDR6 (V100) / 15 GB (T4)
+
+OS: Ubuntu 20.04 (Linux)
+
+Python: 3.10+ 
+
+Frameworks:
+
+ - scikit-learn
+
+ - numpy
+
+ - pandas
+
+ - PyTorch 2.0+ (CUDA-тэй)
+
+ - TensorFlow 2.x
+
+ - XGBoost (GPU-enabled хувилбар Colab дээр суулгах боломжтой)
+
+ - Transformers (HuggingFace)
+
+Онцлог:
+
+ - Cloud дээр ажиллаж байгаа тул hardware-н хүчин чадал нь тухайн Colab runtime-с хамаарна.
+ - Хувийн төхөөрөмж шаардлагагүй, интернэттэй байх л хангалттай.
