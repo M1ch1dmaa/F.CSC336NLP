@@ -37,6 +37,7 @@ Date: 2025-12-19
   - Word embedding ашигласан загварууд traditional bag-of-words-оос илүү сайн байсан
 Дүгнэлт:
   Generative болон discriminative аргуудыг хослуулах нь текстийн семантик мэдээллийг илүү сайн барьж, сантимент ангиллын чанарыг сайжруулдаг.
+
 **Fine-tuning BERT with Bidirectional LSTM for Fine-grained Movie Reviews Sentiment Analysis – Gibson Nkhata et al., 2025. [https://arxiv.org/abs/2502.20682?utm_source=chatgpt.com]**
 BERT-ийн contextual embedding-ийг LSTM-тай хослуулж fine-grained sentiment classification хийх зорилготой.
 Ашигласан аргууд: 
@@ -48,6 +49,7 @@ BERT-ийн contextual embedding-ийг LSTM-тай хослуулж fine-graine
   - Context-aware embedding илүү нарийн sentiment ялгадаг
 Дүгнэлт:
   Transformer болон RNN-г хослуулах нь урт өгүүлбэр дэх sentiment илрүүлэхэд илүү үр дүнтэй.
+
 **Enhancing Sentiment Classification with Machine Learning and Combinatorial Fusion – Sean Patten et al., 2025. [https://arxiv.org/abs/2510.27014?utm_source=chatgpt.com]**
 Олон машин сургалтын аргуудын үр дүнг combinatorial fusion ашиглан нэгтгэх замаар сантимент ангиллыг сайжруулахыг зорьсон.
 Ашигласан аргууд: 
@@ -60,6 +62,7 @@ BERT-ийн contextual embedding-ийг LSTM-тай хослуулж fine-graine
   - Model diversity үр дүнд эерэг нөлөө үзүүлсэн
 Дүгнэлт:
   Classifier-уудын ялгаатай алдааг нөхөх замаар ensemble арга илүү тогтвортой үр дүн өгдөг.
+
 **Semantic Sentiment Analysis Based on Probabilistic Graphical Models and RNN – Ukachi Osisiogu, 2020. [https://arxiv.org/abs/2009.00234?utm_source=chatgpt.com]**
 Семантик хамаарлыг илүү сайн ойлгохын тулд probabilistic graphical model болон RNN-г хослуулсан.
 Ашигласан аргууд: 
@@ -70,6 +73,7 @@ BERT-ийн contextual embedding-ийг LSTM-тай хослуулж fine-graine
   - Traditional ML-ээс илүү F1-score үзүүлсэн
 Дүгнэлт:
   Семантик хамаарлыг explicit загварчлах нь сантимент анализын чанарыг сайжруулдаг.
+
 **A Comprehensive Benchmarking Pipeline for Transformer-Based Sentiment Analysis using Cross-Validated Metrics – Dodo Zaenal Abidin et al., 2025. [https://www.researchgate.net/publication/381285499_Sentiment_Analysis_of_IMDb_Movie_Reviews?utm_source=chatgpt.com]**
 Transformer-based загваруудын гүйцэтгэлийг стандарт pipeline ашиглан харьцуулсан.
 Ашигласан аргууд: 
@@ -81,6 +85,7 @@ Transformer-based загваруудын гүйцэтгэлийг стандар
   - Cross-validation нь үнэлгээг илүү найдвартай болгосон
 Дүгнэлт:
   Transformer загваруудын гүйцэтгэл нь pretraining strategy-оос ихээхэн хамаардаг.
+
 **Sentiment Analysis of IMDB Movie Reviews Using BERT (IARIA conference-ийн paper, 2023). [https://personales.upv.es/thinkmind/dl/conferences/eknow/eknow_2023/eknow_2023_2_30_60011.pdf?utm_source=chatgpt.com]**
 IMDb датаг ашиглан BERT-ийн сантимент ангиллын чадварыг үнэлсэн
 Ашигласан аргууд: 
@@ -91,6 +96,7 @@ IMDb датаг ашиглан BERT-ийн сантимент ангиллын �
   - Traditional ML-ээс илүү үр дүнтэй
 Дүгнэлт:
   Contextual embedding нь sentiment classification-д маш чухал.
+
 **Sentiment Analysis of IMDb Movie Reviews (thesis / Kaggle based) – Domadula 2023. [https://www.diva-portal.org/smash/get/diva2%3A1779708/FULLTEXT02.pdf?utm_source=chatgpt.com]**
 Kaggle болон IMDb dataset дээр олон аргыг харьцуулсан судалгаа.
 Ашигласан аргууд: 
@@ -101,6 +107,7 @@ Kaggle болон IMDb dataset дээр олон аргыг харьцуулса
   - LSTM + Word2Vec хамгийн сайн үр дүн үзүүлсэн
 Дүгнэлт:
   Sequence model нь текстийн дарааллыг илүү сайн ойлгодог.
+
 **Sentiment Analysis of IMDb Movie Reviews Using LSTM (conference/study) – Saad Tayef (document). [https://www.scribd.com/document/744893212/Sentiment-Analysis-of-IMDb-Movie-Reviews-Using-LSTM?utm_source=chatgpt.com]**
 LSTM ашиглан урт текстийн sentiment тодорхойлох боломжийг судалсан.
 Ашигласан аргууд: 
@@ -224,40 +231,22 @@ Hyperparameter оновчлол: GridSearchCV ашиглан загвар бүр
 
 # 5.1 Сургалтын орчин болон төхөөрөмж
 Google Colab орчин:
-
 CPU: Intel Xeon (vCPU, Colab-ээс олгогддог)
-
 RAM: ~12.7 GB стандарт / ~25.5 GB high-RAM боломжтой (runtime тохиргоогоор сонгож болно)
-
 GPU: NVIDIA Tesla T4 
-
 CUDA Version: 12.1 (тухайн runtime-ээс хамаарна)
-
 CUDA Cores: ~2,560 (T4-ийн хувьд)
-
 Memory: 16 GB GDDR6 (V100) / 15 GB (T4)
-
 OS: Ubuntu 20.04 (Linux)
-
 Python: 3.10+ 
-
 Frameworks:
-
  - scikit-learn
-
  - numpy
-
  - pandas
-
  - PyTorch 2.0+ (CUDA-тэй)
-
  - TensorFlow 2.x
-
  - XGBoost (GPU-enabled хувилбар Colab дээр суулгах боломжтой)
-
  - Transformers (HuggingFace)
-
 Онцлог:
-
  - Cloud дээр ажиллаж байгаа тул hardware-н хүчин чадал нь тухайн Colab runtime-с хамаарна.
  - Хувийн төхөөрөмж шаардлагагүй, интернэттэй байх л хангалттай.
