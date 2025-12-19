@@ -26,12 +26,12 @@ Date: 2025-12-19
 
 ## 3.2 Dataset-тэй холбоотой судалгааны өгүүлэл
 **Ensemble of Generative and Discriminative Techniques for Sentiment Analysis of Movie Reviews – Grégoire Mesnil, Tomas Mikolov, Marc’Aurelio Ranzato, Yoshua Bengio, 2014. [https://arxiv.org/abs/1412.5335?utm_source=chatgpt.com]**
-Энэхүү судалгаанд кино шүүмжийн сантимент ангилалд generative болон discriminative аргуудыг хослуулан ашиглах нь гүйцэтгэлийг сайжруулж чадах эсэхийг судалсан.
-Ашигласан аргууд: 
-  - Word2Vec (neural word embeddings)
-  - Logistic Regression
-  - Neural Network classifier
-  - Ensemble learning
+ Энэхүү судалгаанд кино шүүмжийн сантимент ангилалд generative болон discriminative аргуудыг хослуулан ашиглах нь гүйцэтгэлийг сайжруулж чадах эсэхийг судалсан.
+ Ашигласан аргууд: 
+   - Word2Vec (neural word embeddings)
+   - Logistic Regression
+   - Neural Network classifier
+   - Ensemble learning
 Үр дүн:
   - Ensemble загвар нь дан classifier-аас илүү accuracy үзүүлсэн
   - Word embedding ашигласан загварууд traditional bag-of-words-оос илүү сайн байсан
