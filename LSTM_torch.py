@@ -35,7 +35,7 @@ def setup_gpu():
         print("="*80 + "\n")
     else:
         device = torch.device('cpu')
-        print("\n⚠ GPU олдсонгүй - CPU ашиглана\n")
+        print("\n GPU олдсонгүй - CPU ашиглана\n")
     return device
 
 def load_config(config_path='config/lstm_config.json'):
@@ -597,7 +597,4 @@ if __name__ == "__main__":
     print(f"✓ Логууд: logs/lstm_pytorch_experiments.log")
     print(f"✓ Үр дүн: logs/all_experiments_results.csv")
 
-# Жишээ:
-# python src/models/LSTM_torch.py --embedding bert_uncased
-# python src/models/LSTM_torch.py --embedding roberta --max_samples 5000
-# python src/models/LSTM_torch.py --embedding albert
+
